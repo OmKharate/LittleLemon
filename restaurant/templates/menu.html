@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Little Lemon | Menu{% endblock %}
+{% block content %}
+<section class="page-heading"><p class="eyebrow">Made with care</p><h1>Our Menu</h1><p>Seasonal favourites and Mediterranean classics.</p></section>
+<div class="menu-list">
+    {% for item in menu %}
+    <article class="menu-item"><div><h2>{{ item.title }}</h2><p>Prepared fresh in our kitchen.</p></div><span class="menu-price">${{ item.price }}</span></article>
+    {% empty %}<p>Our menu is being prepared. Please check back soon.</p>{% endfor %}
+</div>
+{% endblock %}
