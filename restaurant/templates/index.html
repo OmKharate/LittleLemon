@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Little Lemon | Home{% endblock %}
+{% block content %}
+<section class="hero">
+    <div>
+        <p class="eyebrow">A taste of the Mediterranean</p>
+        <h1>Little Lemon</h1>
+        <p>Fresh ingredients, vibrant flavours, and a warm welcome at every table.</p>
+        <a class="button" href="/restaurant/book/">Reserve a table</a>
+    </div>
+    <img src="{% static 'img/Grill.jpg' %}" alt="Freshly prepared restaurant dish">
+</section>
+<section class="intro">
+    <h2>Made fresh. Served with love.</h2>
+    <p>Explore our menu, meet the people behind the kitchen, or plan your next visit.</p>
+    <div class="cards">
+        <article><h3>Our menu</h3><p>Mediterranean favourites made with seasonal ingredients.</p><a href="/restaurant/menu/">Explore the menu</a></article>
+        <article><h3>Book a table</h3><p>Join us for a relaxed meal with friends and family.</p><a href="/restaurant/book/">Make a reservation</a></article>
+        <article><h3>Our story</h3><p>Discover the people and inspiration behind Little Lemon.</p><a href="/restaurant/about/">Meet us</a></article>
+    </div>
+</section>
+{% endblock %}
