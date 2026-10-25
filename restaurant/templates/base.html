@@ -1,0 +1,15 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Little Lemon{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+<body>
+    {% include 'partials/_header.html' %}
+    <main class="container">{% block content %}{% endblock %}</main>
+    {% include 'partials/_footer.html' %}
+</body>
+</html>
