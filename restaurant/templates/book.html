@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Little Lemon | Book a Table{% endblock %}
+{% block content %}
+<section class="page-heading"><p class="eyebrow">We look forward to seeing you</p><h1>Book a Table</h1><p>Share your details below to request a reservation.</p></section>
+<form method="post" class="booking-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="button" type="submit">Submit reservation</button>
+</form>
+{% endblock %}
